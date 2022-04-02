@@ -1,6 +1,8 @@
 import './App.css'
 import TweetCard from './components/TweetCard'
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 export default function App() {
 
@@ -14,8 +16,16 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>tweet length checker</h1>
-      {tweets.map(tweet => tweet)}
+      <Header />
+      <main>
+        {tweets.map(tweet => (
+          <Fragment key={Math.random()}>
+            {tweet}
+          </Fragment>
+        ))}
+      </main>
+      
+      <Footer />
     </div>
   );
 }
