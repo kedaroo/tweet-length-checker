@@ -3,7 +3,7 @@ import { useState } from 'react'
 // styles
 import './TweetCard.css'
 
-export default function TweetCard() {
+export default function TweetCard({ addTweet }) {
 
     const [length, setLength] = useState(0)
 
@@ -18,7 +18,7 @@ export default function TweetCard() {
                 onChange={(e) => handleChange(e)}
                 maxLength={260}
             />
-            <button className='btn'>add tweet</button>
+            <button className='btn' onClick={ addTweet }>add tweet</button>
             <p className='tweet-length'>{length}/260</p>
         </div>
     )

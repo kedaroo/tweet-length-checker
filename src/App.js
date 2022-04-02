@@ -1,20 +1,21 @@
 import './App.css'
 import TweetCard from './components/TweetCard'
+import { useState } from 'react'
 
-function App() {
+export default function App() {
 
-  
-
-  const addTweet = () => {
-
+  const addTweet = () => { 
+    setTweets(prevTweets => {
+      return [ ...prevTweets, <TweetCard addTweet={addTweet}/>]
+    })
   }
+
+  const [tweets, setTweets] = useState([<TweetCard addTweet={addTweet} />])
 
   return (
     <div className="App">
       <h1>tweet length checker</h1>
-      <TweetCard />
+      {tweets.map(tweet => tweet)}
     </div>
   );
 }
-
-export default App;
