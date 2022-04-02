@@ -5,13 +5,13 @@ export default function Header() {
         <header>
             <table>
                 <tr>
-                    <td class="color1"></td>
-                    <td class="color2"></td>
-                    <td class="color3"></td>
-                    <td class="color4"></td>
+                    <td className="color1"></td>
+                    <td className="color2"></td>
+                    <td className="color3"></td>
+                    <td className="color4"></td>
                 </tr>
             </table>
-            <div class="container-header">
+            <div className="container-header">
                 <h1>tweet length checker</h1>
                 <a href="https://kedar-basutkar.netlify.app/">by kedar basutkar</a>
             </div>

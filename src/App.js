@@ -18,13 +18,8 @@ export default function App() {
     <div className="App">
       <Header />
       <main>
-        {tweets.map(tweet => (
-          <Fragment key={Math.random()}>
-            {tweet}
-          </Fragment>
-        ))}
-      </main>
-      
+        {tweets.map(tweet => (tweet))}
+      </main>      
       <Footer />
     </div>
   );
