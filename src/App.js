@@ -1,9 +1,11 @@
-import './App.css';
+import './App.css'
+import TweetCard from './components/TweetCard'
 
 function App() {
   return (
     <div className="App">
-      hello world
+      <h1>tweet length checker</h1>
+      <TweetCard />
     </div>
   );
 }
